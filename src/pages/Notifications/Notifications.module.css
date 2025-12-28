@@ -1,0 +1,49 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-6);
+    flex-wrap: wrap;
+    gap: var(--space-4);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: var(--font-size-2xl);
+    font-family: var(--font-family-header);
+}
+
+.actions {
+    display: flex;
+    gap: var(--space-3);
+}
+
+.listCard {
+    padding: 0 !important;
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    background: var(--bg-card);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    padding: var(--space-8);
+}
+
+.emptyState {
+    padding: var(--space-10);
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-card);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--border-light);
+}

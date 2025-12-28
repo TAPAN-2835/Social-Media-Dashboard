@@ -1,0 +1,177 @@
+/* Global Design System - Premium Dashboard */
+:root {
+  /* =========================
+     Color Palette (Premium)
+     ========================= */
+  
+  /* Brand Colors */
+  --primary-color: #6366f1; /* Indigo 500 - Modern & Professional */
+  --primary-hover: #4f46e5; /* Indigo 600 */
+  --primary-light: #e0e7ff; /* Indigo 100 */
+  
+  /* Secondary / Accent */
+  --secondary-color: #ec4899; /* Pink 500 - Subtle Pop */
+  --accent-color: #8b5cf6; /* Violet 500 */
+  
+  /* Neutral scale (Slate - Slate is cleaner than gray) */
+  --bg-body: #f8fafc;        /* Slate 50 */
+  --bg-card: #ffffff;        /* White */
+  --bg-sidebar: #ffffff;     /* White */
+  --bg-input: #f1f5f9;       /* Slate 100 */
+  
+  --text-main: #0f172a;      /* Slate 900 - High Contrast */
+  --text-secondary: #64748b; /* Slate 500 - Muted */
+  --text-placeholder: #94a3b8; /* Slate 400 */
+  --text-white: #ffffff;
+
+  /* Borders */
+  --border-color: #e2e8f0;   /* Slate 200 */
+  --border-light: #f1f5f9;   /* Slate 100 */
+  
+  /* Status Colors */
+  --status-success: #10b981;
+  --status-error: #ef4444;
+  --status-warning: #f59e0b;
+  --status-info: #3b82f6;
+
+  /* =========================
+     Typography
+     ========================= */
+  --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family-header: 'Plus Jakarta Sans', var(--font-family-base); /* If available, else falls back */
+  
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-md: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-2xl: 1.5rem;   /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* =========================
+     Spacing & Layout
+     ========================= */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem;  /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem;    /* 16px */
+  --space-5: 1.25rem; /* 20px */
+  --space-6: 1.5rem;  /* 24px */
+  --space-8: 2rem;    /* 32px */
+  --space-10: 2.5rem; /* 40px */
+  --space-12: 3rem;   /* 48px */
+  
+  --container-max-width: 1280px;
+  --header-height: 70px;
+  --sidebar-width: 280px;
+
+  /* =========================
+     Effects & Shapes
+     ========================= */
+  --border-radius-sm: 6px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
+  --border-radius-full: 9999px;
+
+  /* Smooth, modern shadows */
+  --box-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --box-shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+  --box-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+  --box-shadow-focus: 0 0 0 3px rgba(99, 102, 241, 0.3);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark Mode Variables - Deep & Rich */
+[data-theme="dark"] {
+  --bg-body: #0f172a;        /* Slate 900 */
+  --bg-card: #1e293b;        /* Slate 800 */
+  --bg-sidebar: #1e293b;     /* Slate 800 */
+  --bg-input: #334155;       /* Slate 700 */
+
+  --text-main: #f1f5f9;      /* Slate 100 */
+  --text-secondary: #94a3b8; /* Slate 400 */
+  --text-placeholder: #64748b; /* Slate 500 */
+  
+  --border-color: #334155;   /* Slate 700 */
+  --border-light: #1e293b;
+  
+  --primary-light: #312e81; /* Indigo 900 */
+  
+  /* Adjust shadows for dark mode to be visible */
+  --box-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   Global Reset & Base
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-header);
+  color: var(--text-main);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.25;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: var(--border-radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-secondary);
+}

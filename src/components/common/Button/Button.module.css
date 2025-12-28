@@ -1,0 +1,115 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-family: inherit;
+    white-space: nowrap;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.button:focus-visible {
+    box-shadow: var(--box-shadow-focus);
+}
+
+/* Variants */
+.primary {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.primary:hover:not(:disabled) {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--box-shadow-md);
+}
+
+.primary:active:not(:disabled) {
+    transform: translateY(0);
+    background-color: var(--primary-color);
+}
+
+.secondary {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card);
+}
+
+.secondary:hover:not(:disabled) {
+    border-color: var(--primary-light);
+    color: var(--primary-color);
+    background-color: var(--bg-body);
+}
+
+.icon {
+    background-color: transparent;
+    color: var(--text-secondary);
+    padding: var(--space-2);
+    border-radius: var(--border-radius-full);
+}
+
+.icon:hover:not(:disabled) {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.ghost {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.ghost:hover:not(:disabled) {
+    background-color: var(--primary-light);
+}
+
+/* Sizes */
+.small {
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--font-size-xs);
+    height: 28px;
+}
+
+.medium {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--font-size-sm);
+    height: 40px;
+}
+
+.large {
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--font-size-md);
+    height: 48px;
+}
+
+.icon.small {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+}
+
+.icon.medium {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+}
+
+.icon.large {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+}

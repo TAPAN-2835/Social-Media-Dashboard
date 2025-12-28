@@ -1,0 +1,125 @@
+.profileCard {
+    overflow: hidden;
+    padding: 0 !important;
+    margin-bottom: var(--space-8);
+    border: 1px solid var(--border-light);
+    background: var(--bg-card);
+}
+
+.coverImage {
+    height: 180px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    width: 100%;
+    position: relative;
+}
+
+.coverImage::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.profileContent {
+    padding: var(--space-6);
+    padding-top: 0;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: var(--space-4);
+    margin-top: -60px;
+    /* Overlap with cover image */
+    position: relative;
+    z-index: 10;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--bg-card);
+    background-color: var(--bg-card);
+    object-fit: cover;
+    box-shadow: var(--box-shadow-md);
+}
+
+.actions {
+    margin-bottom: var(--space-2);
+}
+
+.info {
+    margin-bottom: var(--space-6);
+}
+
+.name {
+    font-family: var(--font-family-header);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    margin-bottom: var(--space-1);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--text-main);
+}
+
+.verified {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 50%;
+    padding: 2px;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.username {
+    color: var(--text-secondary);
+    font-size: var(--font-size-md);
+    margin-bottom: var(--space-4);
+}
+
+.bio {
+    color: var(--text-main);
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.stats {
+    display: flex;
+    gap: var(--space-8);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--border-light);
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: opacity var(--transition-fast);
+}
+
+.statItem:hover {
+    opacity: 0.8;
+}
+
+.statValue {
+    font-weight: 800;
+    font-size: var(--font-size-lg);
+    color: var(--text-main);
+}
+
+.statLabel {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+}
