@@ -2,8 +2,9 @@
 
 A modern, responsive, and fully functional social media dashboard built with React.js using Vite. This project demonstrates professional frontend development practices including component-based architecture, state management, routing, and proper file structure.
 
-![Social Dashboard Preview](/public/vite.svg)
-*(Note: Replace with actual screenshots after running)*
+<img width="1366" height="643" alt="image" src="https://github.com/user-attachments/assets/af2271b2-e4e2-4235-8ce9-e5689bb5f49d" />
+
+<img width="1365" height="646" alt="image" src="https://github.com/user-attachments/assets/df7988e8-d488-4cbc-9454-a48699ba8781" />
 
 ## 🚀 Features
 
